@@ -1,0 +1,34 @@
+grub-cloud (0.0.5) unstable; urgency=medium
+
+  [ Thomas Goirand ]
+  * Add consoleblank=0 kernel parameter.
+
+  [ Bastian Blank ]
+  * Support EFI secure boot.
+
+ -- Bastian Blank <waldi@debian.org>  Sun, 08 Dec 2019 13:35:18 +0100
+
+grub-cloud (0.0.4) unstable; urgency=medium
+
+  * Do nothing if no flag file exists. (closes: #912038, #912041)
+
+ -- Bastian Blank <waldi@debian.org>  Sat, 08 Dec 2018 19:06:50 +0100
+
+grub-cloud (0.0.3) unstable; urgency=medium
+
+  * Remove kernel maintainer snippets and update dependencies.
+  * Fix earlyprintk kernel parameter.
+
+ -- Bastian Blank <waldi@debian.org>  Mon, 29 Oct 2018 13:48:12 +0100
+
+grub-cloud (0.0.2) unstable; urgency=medium
+
+  * Do nothing if running within piuparts.
+
+ -- Bastian Blank <waldi@debian.org>  Mon, 22 Oct 2018 17:02:57 +0200
+
+grub-cloud (0.0.1) unstable; urgency=medium
+
+  * Initial Release.
+
+ -- Bastian Blank <waldi@debian.org>  Sat, 29 Sep 2018 19:37:29 +0200
