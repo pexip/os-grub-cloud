@@ -4,18 +4,17 @@ set -eu
 
 install_i386_pc() {
     local basedev=$(grub-probe -t device /boot/ | sed -Ee 's/[0-9]+$//' -e 's/([0-9])p$/\1/')
-    grub-install --target=i386-pc "$basedev"
+    grub-install -v --target=i386-pc "$basedev"
 }
 
 install_x86_64_efi() {
     # No support for shim yet, install also into removable location
-    grub-install --target=x86_64-efi --no-nvram --uefi-secure-boot --force-extra-removable
+    if [ -d /boot/efi ]; then
+        grub-install -v --target=x86_64-efi --no-nvram --force-extra-removable
+    else
+        echo "No EFI directory found, skiping EFI grub-install"
+    fi
 }
-
-if ! [ -e /etc/grub.d/enable_cloud ]; then
-    echo "Skipping installation without enable flag for cloud." >&2
-    exit 0
-fi
 
 case "$1" in
     configure)

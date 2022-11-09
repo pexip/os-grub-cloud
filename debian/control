@@ -13,6 +13,9 @@ XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
 Package: grub-cloud-amd64
 Architecture: amd64
 Depends: ${misc:Depends}, grub2-common (>= 2.02+dfsg1-7), grub-efi-amd64-bin, grub-pc-bin
+Replaces: grub-pc
+Provides: grub-pc
+Conflicts: grub-pc
 Description: GRand Unified Bootloader (cloud setup)
  This package contains the cloud image setup of GRUB and installs GRUB for the
  PC/BIOS and the EFI-AMD64 architecture.
