@@ -1,3 +1,11 @@
+grub-cloud (0.0.5pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+  * Temporarily remove support for secure boot things, we don't have
+    those yet
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Wed, 09 Nov 2022 13:43:51 +0000
+
 grub-cloud (0.0.5) unstable; urgency=medium
 
   [ Thomas Goirand ]

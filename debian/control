@@ -1,16 +1,18 @@
 Source: grub-cloud
 Section: admin
 Priority: optional
-Maintainer: Debian Cloud Team <debian-cloud@lists.debian.org>
-Uploaders: Bastian Blank <waldi@debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Cloud Team <debian-cloud@lists.debian.org>
+XSBC-Pexip-Original-Uploaders: Bastian Blank <waldi@debian.org>
 Build-Depends: debhelper (>= 11)
 Standards-Version: 4.1.3
 Vcs-Browser: https://salsa.debian.org/cloud-team/grub-cloud
 Vcs-Git: https://salsa.debian.org/cloud-team/grub-cloud.git
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
 
 Package: grub-cloud-amd64
 Architecture: amd64
-Depends: ${misc:Depends}, grub2-common (>= 2.02+dfsg1-7), grub-efi-amd64-bin, grub-efi-amd64-signed, grub-pc-bin, shim-signed
+Depends: ${misc:Depends}, grub2-common (>= 2.02+dfsg1-7), grub-efi-amd64-bin, grub-pc-bin
 Description: GRand Unified Bootloader (cloud setup)
  This package contains the cloud image setup of GRUB and installs GRUB for the
  PC/BIOS and the EFI-AMD64 architecture.
