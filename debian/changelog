@@ -1,3 +1,10 @@
+grub-cloud (0.0.5pexip2) pexip; urgency=medium
+
+  * Add some debconf handling for config options, borrowed from the
+    main grub package.
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Thu, 15 Jun 2023 12:12:45 +0100
+
 grub-cloud (0.0.5pexip1) pexip; urgency=medium
 
   * Prepare Pexip packaging
