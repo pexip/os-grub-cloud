@@ -21,3 +21,15 @@ Description: GRand Unified Bootloader (cloud setup)
  PC/BIOS and the EFI-AMD64 architecture.
  .
  You don't want to use this package outside of cloud images.
+
+Package: grub-cloud-arm64
+Architecture: arm64
+Depends: ${misc:Depends}, grub2-common (>= 2.02+dfsg1-7), grub-efi-arm64-bin
+Replaces: grub-pc
+Provides: grub-pc
+Conflicts: grub-pc
+Description: GRand Unified Bootloader (cloud setup)
+ This package contains the cloud image setup of GRUB and installs GRUB for the
+ EFI-ARM64 architecture.
+ .
+ You don't want to use this package outside of cloud images.

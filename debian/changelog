@@ -1,3 +1,11 @@
+grub-cloud (0.0.5pexip3) pexip; urgency=medium
+
+  * Undo the debconf handing, we don't actually want it.
+  * Instead, ship a copy of /etc/default/grub that meets our needs.
+  * Add grub-cloud-arm64 package
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 19 Jun 2023 12:28:47 +0100
+
 grub-cloud (0.0.5pexip2) pexip; urgency=medium
 
   * Add some debconf handling for config options, borrowed from the

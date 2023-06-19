@@ -5,15 +5,10 @@ set -e
 CONF_FILE="/etc/default/grub"
 SAVED_CONF="$CONF_FILE.bak"
 
-install_i386_pc() {
-    local basedev=$(grub-probe -t device /boot/ | sed -Ee 's/[0-9]+$//' -e 's/([0-9])p$/\1/')
-    grub-install -v --target=i386-pc "$basedev"
-}
-
-install_x86_64_efi() {
+install_arm64_efi() {
     # No support for shim yet, install also into removable location
     if [ -d /boot/efi ]; then
-        grub-install -v --target=x86_64-efi --no-nvram --force-extra-removable
+        grub-install -v --target=arm64-efi --no-nvram --force-extra-removable
     else
         echo "No EFI directory found, skipping EFI grub-install"
     fi
@@ -29,14 +24,12 @@ case "$1" in
 	    mv -vf "$SAVED_CONF" "$CONF_FILE"
 	fi
 
-        install_i386_pc
-        install_x86_64_efi
+        install_arm64_efi
         update-grub
     ;;
 
     triggered)
-        install_i386_pc
-        install_x86_64_efi
+        install_arm64_efi
     ;;
 esac
 

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+CONF_FILE="/etc/default/grub"
+SAVED_CONF="$CONF_FILE.bak"
+
+# If it exists, move the existing config file to a backup location
+if [ -f "$CONF_FILE" ]; then
+   mv -f "$CONF_FILE" "$SAVED_CONF"
+fi
