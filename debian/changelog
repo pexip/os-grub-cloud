@@ -1,3 +1,18 @@
+grub-cloud (0.1.1) unstable; urgency=medium
+
+  * Again install into fixed path as well, workaround grub problem.
+
+ -- Bastian Blank <waldi@debian.org>  Sat, 21 Oct 2023 12:49:05 +0200
+
+grub-cloud (0.1.0) unstable; urgency=medium
+
+  * Install grub only into removable path.
+  * Also re-install grub on package upgrade.
+  * Add support for arm64 architecture.
+  * Don't require root for building.
+
+ -- Bastian Blank <waldi@debian.org>  Thu, 19 Oct 2023 11:46:57 +0200
+
 grub-cloud (0.0.5) unstable; urgency=medium
 
   [ Thomas Goirand ]

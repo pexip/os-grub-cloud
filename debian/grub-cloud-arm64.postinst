@@ -2,20 +2,14 @@
 
 set -eu
 
-install_i386_pc() {
-    local basedev=$(grub-probe -t device /boot/ | sed -Ee 's/[0-9]+$//' -e 's/([0-9])p$/\1/')
-    grub-install --target=i386-pc "$basedev"
-}
-
-install_x86_64_efi() {
+install_arm64_efi() {
     # Install into removable location, we don't have boot entries
     # Install into normal location, grub requires it
-    grub-install --target=x86_64-efi --no-nvram --uefi-secure-boot --force-extra-removable
+    grub-install --target=arm64-efi --no-nvram --uefi-secure-boot --force-extra-removable
 }
 
 install() {
-    install_i386_pc
-    install_x86_64_efi
+    install_arm64_efi
 }
 
 if ! [ -e /etc/grub.d/enable_cloud ]; then
