@@ -1,3 +1,9 @@
+grub-cloud (0.0.5pexip4) pexip-bookworm; urgency=medium
+
+  * Initial bookworm build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 16 Nov 2023 10:01:08 +0000
+
 grub-cloud (0.0.5pexip3) pexip; urgency=medium
 
   * Undo the debconf handing, we don't actually want it.
