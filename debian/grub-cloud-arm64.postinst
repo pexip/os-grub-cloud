@@ -2,9 +2,6 @@
 
 set -e
 
-CONF_FILE="/etc/default/grub"
-SAVED_CONF="$CONF_FILE.bak"
-
 install_arm64_efi() {
     # No support for shim yet, install also into removable location
     if [ -d /boot/efi ]; then
@@ -16,14 +13,7 @@ install_arm64_efi() {
 
 case "$1" in
     configure)
-        . /usr/share/debconf/confmodule
-
-	# If we have a saved copy of an existing config file, move it
-	# back into place
-	if [ -f "$SAVED_CONF" ]; then
-	    mv -vf "$SAVED_CONF" "$CONF_FILE"
-	fi
-
+	cp /usr/share/grub-cloud/grub /etc/default/grub
         install_arm64_efi
         update-grub
     ;;

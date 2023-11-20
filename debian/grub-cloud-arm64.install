@@ -1,1 +1,1 @@
-etc/default/grub /etc/default
+etc/default/grub /usr/share/grub-cloud

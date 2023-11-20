@@ -1,8 +1,19 @@
-grub-cloud (0.0.5pexip4) pexip-bookworm; urgency=medium
+grub-cloud (0.0.5pexip5) pexip-bookworm; urgency=medium
 
-  * Initial bookworm build
+  * Bookworm build
 
- -- Mark Hymers <mark.hymers@pexip.com>  Thu, 16 Nov 2023 10:01:08 +0000
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 20 Nov 2023 17:30:56 +0000
+
+grub-cloud (0.0.5pexip4) pexip; urgency=medium
+
+  * Tweak /etc/default/grub handling *again*. Some older installations
+    will have different config for GRUB_CMDLINE_LINUX_DEFAULT, and
+    we're now copying that back into place which causes a change from
+    our desired and shipped config. Aargh. Instead, remove the
+    conffile altogether in preinst and just copy the correct file into
+    place from elsewhere in postinst.
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 20 Nov 2023 17:28:18 +0100
 
 grub-cloud (0.0.5pexip3) pexip; urgency=medium
 
