@@ -1,3 +1,14 @@
+grub-cloud (0.0.5pexip4) pexip; urgency=medium
+
+  * Tweak /etc/default/grub handling *again*. Some older installations
+    will have different config for GRUB_CMDLINE_LINUX_DEFAULT, and
+    we're now copying that back into place which causes a change from
+    our desired and shipped config. Aargh. Instead, remove the
+    conffile altogether in preinst and just copy the correct file into
+    place from elsewhere in postinst.
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 19 Jun 2023 12:28:47 +0100
+
 grub-cloud (0.0.5pexip3) pexip; urgency=medium
 
   * Undo the debconf handing, we don't actually want it.
