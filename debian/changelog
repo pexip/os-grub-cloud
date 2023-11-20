@@ -7,7 +7,7 @@ grub-cloud (0.0.5pexip4) pexip; urgency=medium
     conffile altogether in preinst and just copy the correct file into
     place from elsewhere in postinst.
 
- -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 19 Jun 2023 12:28:47 +0100
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 20 Nov 2023 17:28:18 +0100
 
 grub-cloud (0.0.5pexip3) pexip; urgency=medium
 
