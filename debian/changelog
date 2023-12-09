@@ -1,3 +1,9 @@
+grub-cloud (0.0.5pexip6) pexip-bookworm; urgency=medium
+
+  * Bookworm build for product distribution
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Sat, 09 Dec 2023 22:52:38 +0000
+
 grub-cloud (0.0.5pexip5) pexip-bookworm; urgency=medium
 
   * Bookworm build
