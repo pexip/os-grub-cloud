@@ -1,3 +1,9 @@
+grub-cloud (0.0.5+pexip24u7) pexip-bookworm; urgency=medium
+
+  * New versioning scheme
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 01 Feb 2024 16:00:20 +0000
+
 grub-cloud (0.0.5pexip6) pexip-bookworm; urgency=medium
 
   * Bookworm build for product distribution
