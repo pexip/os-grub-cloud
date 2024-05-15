@@ -1,3 +1,10 @@
+grub-cloud (0.0.5+pexip24u8) pexip; urgency=medium
+
+  * Enable audit early in boot
+    Add "audit=1 audit_backlog_limit=8192"
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Wed, 15 May 2024 12:06:26 +0100
+
 grub-cloud (0.0.5+pexip24u7) pexip-bookworm; urgency=medium
 
   * New versioning scheme
