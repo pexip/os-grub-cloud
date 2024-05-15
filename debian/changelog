@@ -1,3 +1,9 @@
+grub-cloud (0.0.5+pexip24u9) pexip; urgency=medium
+
+  * Make sure we're using EFI stuff as PexOS, not Debian
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Wed, 15 May 2024 14:36:53 +0100
+
 grub-cloud (0.0.5+pexip24u8) pexip; urgency=medium
 
   * Enable audit early in boot

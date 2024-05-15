@@ -10,7 +10,13 @@ install_i386_pc() {
 install_x86_64_efi() {
     # No support for shim yet, install also into removable location
     if [ -d /boot/efi ]; then
+
+	# Force any old EFI stuff tagged incorrectly as Debian
+	rm -rf /boot/efi/EFI/debian
+
+	# Install the new binary
         grub-install -v --target=x86_64-efi --no-nvram --force-extra-removable
+
     else
         echo "No EFI directory found, skipping EFI grub-install"
     fi
