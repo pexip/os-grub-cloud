@@ -10,7 +10,7 @@ install_arm64_efi() {
 	rm -rf /boot/efi/EFI/debian
 
 	# Install the new binary
-        grub-install -v --target=arm64-efi --no-nvram --force-extra-removable
+        grub-install --target=arm64-efi --no-nvram --force-extra-removable
 
     else
         echo "No EFI directory found, skipping EFI grub-install"

@@ -1,3 +1,10 @@
+grub-cloud (0.0.5+pexip24u10) pexip; urgency=medium
+
+  * Stop calling grub-install with -v, it's way too loud and we don't
+    need all this debug any more.
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Thu, 16 May 2024 16:41:22 +0100
+
 grub-cloud (0.0.5+pexip24u9) pexip; urgency=medium
 
   * Make sure we're using EFI stuff as PexOS, not Debian
