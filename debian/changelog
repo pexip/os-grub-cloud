@@ -1,3 +1,9 @@
+grub-cloud (0.0.5+pexip24u11) pexip; urgency=medium
+
+  * Do not install grub if running in a container
+
+ -- John-Mark Bell <jmb@pexip.com>  Wed, 14 Aug 2024 11:18:18 +0100
+
 grub-cloud (0.0.5+pexip24u10) pexip; urgency=medium
 
   * Stop calling grub-install with -v, it's way too loud and we don't

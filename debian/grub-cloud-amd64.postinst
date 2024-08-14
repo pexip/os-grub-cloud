@@ -2,6 +2,11 @@
 
 set -e
 
+running_in_container()
+{
+    type systemd-detect-virt >/dev/null 2>&1 && systemd-detect-virt --quiet --container
+}
+
 install_i386_pc() {
     local basedev=$(grub-probe -t device /boot/ | sed -Ee 's/[0-9]+$//' -e 's/([0-9])p$/\1/')
     grub-install --target=i386-pc "$basedev"
@@ -25,14 +30,18 @@ install_x86_64_efi() {
 case "$1" in
     configure)
 	cp /usr/share/grub-cloud/grub /etc/default/grub
-        install_i386_pc
-        install_x86_64_efi
+        if ! running_in_container; then
+            install_i386_pc
+            install_x86_64_efi
+        fi
         update-grub
     ;;
 
     triggered)
-        install_i386_pc
-        install_x86_64_efi
+        if ! running_in_container; then
+            install_i386_pc
+            install_x86_64_efi
+        fi
     ;;
 esac
 

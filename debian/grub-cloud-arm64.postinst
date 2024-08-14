@@ -2,6 +2,11 @@
 
 set -e
 
+running_in_container()
+{
+    type systemd-detect-virt >/dev/null 2>&1 && systemd-detect-virt --quiet --container
+}
+
 install_arm64_efi() {
     # No support for shim yet, install also into removable location
     if [ -d /boot/efi ]; then
@@ -20,12 +25,16 @@ install_arm64_efi() {
 case "$1" in
     configure)
 	cp /usr/share/grub-cloud/grub /etc/default/grub
-        install_arm64_efi
+        if ! running_in_container; then
+            install_arm64_efi
+        fi
         update-grub
     ;;
 
     triggered)
-        install_arm64_efi
+        if ! running_in_container; then
+            install_arm64_efi
+        fi
     ;;
 esac
 
