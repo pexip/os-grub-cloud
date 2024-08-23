@@ -1,3 +1,9 @@
+grub-cloud (0.0.5+pexip24u12) pexip; urgency=medium
+
+  * Bump version for a rebuild to get arm64 packages
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Fri, 23 Aug 2024 18:07:40 +0100
+
 grub-cloud (0.0.5+pexip24u11) pexip; urgency=medium
 
   * Do not install grub if running in a container
