@@ -1,3 +1,9 @@
+grub-cloud (0.0.5+pexip24u13) pexip; urgency=medium
+
+  * Bump version for a rebuild to get arm64 packages (again)
+
+ -- John-Mark Bell <jmb@pexip.com>  Sat, 24 Aug 2024 21:28:16 +0100
+
 grub-cloud (0.0.5+pexip24u12) pexip; urgency=medium
 
   * Bump version for a rebuild to get arm64 packages
