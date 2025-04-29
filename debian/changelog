@@ -1,3 +1,9 @@
+grub-cloud (0.0.5+pexip25u1) pexip-trixie; urgency=medium
+
+  * Initial trixie build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 29 Apr 2025 22:33:13 +0100
+
 grub-cloud (0.0.5+pexip24u13) pexip; urgency=medium
 
   * Bump version for a rebuild to get arm64 packages (again)
