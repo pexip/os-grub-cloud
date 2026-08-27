@@ -12,7 +12,7 @@ XS-Pexip-Upstream: http://deb.debian.org/debian/ trixie
 
 Package: grub-cloud-amd64
 Architecture: amd64
-Depends: ${misc:Depends}, grub2-common (>= 2.02+dfsg1-7), grub-efi-amd64-bin, grub-pc-bin
+Depends: ${misc:Depends}, grub2-common (>= 2.02+dfsg1-7), grub-efi-amd64-signed | grub-efi-amd64-bin, grub-pc-bin
 Replaces: grub-pc
 Provides: grub-pc
 Conflicts: grub-pc
@@ -24,7 +24,7 @@ Description: GRand Unified Bootloader (cloud setup)
 
 Package: grub-cloud-arm64
 Architecture: arm64
-Depends: ${misc:Depends}, grub2-common (>= 2.02+dfsg1-7), grub-efi-arm64-bin
+Depends: ${misc:Depends}, grub2-common (>= 2.02+dfsg1-7), grub-efi-arm64-signed | grub-efi-arm64-bin 
 Replaces: grub-pc
 Provides: grub-pc
 Conflicts: grub-pc

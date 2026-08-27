@@ -1,3 +1,9 @@
+grub-cloud (0.1.1+really+0.0.5+pexip25u4) pexip-trixie; urgency=medium
+
+  * Tweak dependencies to work with signed packages
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Thu, 27 Aug 2026 21:34:47 +0100
+
 grub-cloud (0.1.1+really+0.0.5+pexip25u3) pexip-trixie; urgency=medium
 
   * Trixie build for product distribution
