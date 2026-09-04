@@ -1,3 +1,10 @@
+grub-cloud (0.1.1+really+0.0.5+pexip25u5) pexip-trixie; urgency=medium
+
+  * Fix up dependencies - we still need the grub-efi-$arch-bin package
+    as well
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Fri, 04 Sep 2026 12:10:17 +0100
+
 grub-cloud (0.1.1+really+0.0.5+pexip25u4) pexip-trixie; urgency=medium
 
   * Tweak dependencies to work with signed packages
