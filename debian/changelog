@@ -1,3 +1,10 @@
+grub-cloud (0.1.1+really+0.0.5+pexip25u6) pexip-trixie; urgency=medium
+
+  * Add a dependency on shim-signed for both grub-cloud-amd64 and
+    grub-cloud-arm64; let's have secure boot for upgraded systems too.
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Fri, 08 Oct 2026 17:06:10 +0100
+
 grub-cloud (0.1.1+really+0.0.5+pexip25u5) pexip-trixie; urgency=medium
 
   * Fix up dependencies - we still need the grub-efi-$arch-bin package
